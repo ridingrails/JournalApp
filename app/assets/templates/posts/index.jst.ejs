@@ -1,0 +1,13 @@
+<% collection.each(function(post) { %>
+  <ul>
+    <li><%= post.escape('title') %> --
+    <button
+      type="submit"
+      data-id="<%= post.id %>"
+      class="delete">
+        Delete
+      </button> --
+      <a href="/posts/<%= post.id %>" data-id="<%= post.id %>">Show</a>
+    </li>
+  </ul>
+<% }); %>
